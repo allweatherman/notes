@@ -1,0 +1,35 @@
+/* 전체 컨테이너 스타일 */
+#container {
+    width: 520px;
+    border: 1px solid black;
+    padding: 20px 40px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    line-height: 30px;
+}
+
+li label[for] {
+    width: 60px;
+    display: inline-block;
+}
+
+/* 개인정보 들여쓰기 (ul)
+        - h4:nth-of-type(1) => 첫 번째 h4요소(개인정보)를 선택
+        - + ul => 해당 h4 바로 다음에 오는 ul 요소를 선택
+*/
+
+h4:nth-of-type(1) + ul {
+    margin-left: 30px;
+
+}
+
+h4:nth-of-type(2) + ul {
+    margin-left: 30px;
+
+}

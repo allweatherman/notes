@@ -1,0 +1,36 @@
+fieldset {
+    margin-bottom: 20px; /* 아래쪽 마진 */
+}
+
+fieldset legend{ /*fieldset 요소의 하위 요소인 legend에 적용 */
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 10px;
+
+}
+
+#apply li label { 
+    width: 300px;
+    display: inline-block;
+
+}
+
+
+
+/* '주문하기', '취소하기' 버튼 */
+div{
+    width: 400px;
+
+}
+
+input[type="submit"], input[type="reset"]{
+    text-align: center;
+
+}
