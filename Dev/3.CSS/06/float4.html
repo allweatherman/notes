@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 800px;
+            margin: 10px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .sidebar{
+            width: 150px;
+            height: 150px;
+        }
+        #left{
+            background: #ffd800;
+            float: left;
+            margin-right: 10px;
+        }
+        #right{
+            background: #0094ff;
+            float: right;
+            margin-right: 10px;
+        }
+        .clear {
+            clear: both;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar" id="left">사이드바</div>
+        <div class="sidebar" id="right">사이드바</div>
+        <p>The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.</p>
+        <p class="clear">The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.</p>
+    </div>
+</body>
+</html>

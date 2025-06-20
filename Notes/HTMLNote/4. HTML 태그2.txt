@@ -56,3 +56,13 @@
             - size, multiple 속성
         - <option>
             - value, selected 속성
+
+5. <pre> 태그
+    1) The Preformatted Text element
+    2) 태그 내부의 공백, 줄바꿈, 들여쓰기 등을 그대로 화면에 표시함
+    3) 중요한 텍스트를 그대로 보여줄 때 사용함
+
+6. <code> 태그
+    1) pre 태그와 함께 사용하면 들여쓰기와 줄바꿈이 그대로 유지되어
+       가독성이 좋아짐
+    2) 코드 조각, 명령어, 변수명 등을 표시할 때 사용함

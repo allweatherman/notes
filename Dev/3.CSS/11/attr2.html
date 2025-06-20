@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style : none;
+        }
+
+        li {
+            width: 120px;
+            display: inline-block;
+            margin : 10px;
+        }
+
+        li a{ 
+            padding : 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* href 속성이 있는 a 요소의 스타일 지정하기 */
+        a[href] {
+            background: yellow;
+            border: 1px solid #ccc;
+            font-weight: normal;
+
+        }
+        a[target=_blank]{
+            padding-right: 30px;
+            background: url(images/bg.jpeg) no-repeat center right;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메인 메뉴 : </a></li>
+        <li><a href="https://www.apple.com/kr/" target="blank">메뉴 1</a></li>
+        <li><a href="https://www.apple.com/kr/ipad/">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+        <li><a href="#">메뉴 4</a></li>
+    </ul>
+</body>
+</html>

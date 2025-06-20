@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필 카드</title>
+    <style>
+        * {
+            margin: 0;      /* 모든 요소의 외부 여백 제거 */
+            padding: 0;     /* 모든 요소의 내부 여백 제거 */
+            box-sizing: border-box; /*박스 크기 계산에 padding, border 포함 */
+
+        }
+        body {
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; /* 줄간격을 1.6배로 설정 (가독성 향상) */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0 20px 40px; /* 페이지 전체에 여백 */
+            min-height: 100vh; /* 최소 높이를 화면 전체 높이로 설정 */
+        }
+        .profile-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgb(0, 0, 0.12);
+            padding: 40px;
+            max-width: 400px; /* 최대 너비 제한 */
+            width: 100%; /* 반응형 위한 전체 너비 설정 */
+            text-align: center; /* 전체 내용 중앙 정렬 */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 0 auto; /* 좌우 중앙 정렬 */
+        }
+        /* 카드 호버 효과 */
+        .profile-card:hover {
+            transform: translateY(-5px);    /* 위로 5px 이동 */
+            box-shadow: 0 12px 40px rgba(0,0,0, 0.18); /* 그림자 강화 */
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0 auto 20px ;
+            font-size: 3em;
+            font-weight: bold;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            line-height: 120px;
+        }
+        /* 프로필 이름 */
+        .profile-name{
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .profile-title{
+            color: #667eea;
+            font-size: 1.1em;
+            font-weight: 500; /* 중간 굵기 */
+            margin-bottom: 8px; /* 아래 여백 */
+        }
+
+        .profile-description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 통계 영역 */
+        .profile-stats{
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;   
+        }
+        /* 개별 통계 항목 - 가로배치(inline-block) */
+        .stats {
+            display: inline-block;
+            text-align: center;
+            margin: 0 20px;
+            vertical-align: top;
+        }
+
+        .stats-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .stats-label {
+            font-size: 0.85em;
+            color: #888;
+            font-weight: 500;
+            display: block;
+        }
+
+        .stats:hover .stats-number {
+            color: #764ba2;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+        .social-links {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #f8f9fa;
+            color: #666;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 8px;
+
+            line-height: 45px;
+            text-align: center;
+        }
+
+        .social-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            transition: all 0.3s ease;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">미션임파서블 파이널 완성</h1>
+    <!-- 메인 프로필 카드 -->
+    <div class="profile-card">
+        <!-- 원형 아바타(실제는 이미지를 사용해야함) -->
+        <div class="profile-avatar">
+            이
+        </div>
+    
+    <!-- 사용자 기본 정보 -->
+        <h2 class="profile-name">이개발</h2>
+        <p class="profile-title">프런트엔드 개발자</p>
+        <p class="profile-description">
+            사용자 중심의 웹 경험을 만드는 것을 좋아하는 개발자입니다.
+            HTML, CSS, JavaScript를 활용해서 아름답고 기능적인 인터페이스를 제작합니다.
+        </p>
+
+        <!-- 통계 정보 영역 -->
+        <div class="profile-stats">
+            <div  class="stats">
+                <span class="stats-number">324</span>
+                <span class="stats-label">팔로워</span>
+            </div>
+            <div  class="stats">
+                <span class="stats-number">89</span>
+                <span class="stats-label">팔로잉</span>
+            </div>
+            <div  class="stats">
+                <span class="stats-number">42</span>
+                <span class="stats-label">프로젝트</span>
+            </div>
+            <!-- 소셜 미디어 링크 -->
+            <div class="social-links">
+                <a href="#" class="social-link" title="github">🐙</a>
+                <a href="#" class="social-link" title="linkedin">💼</a>
+                <a href="#" class="social-link" title="email">✉️</a>
+                <a href="#" class="social-link" title="twitter">🐦</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

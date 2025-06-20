@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding : 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+
+        let n= parseInt(prompt("얼마까지 더할까요?"));
+
+
+        if (isNaN(n) || n <= 0){
+                document.write("올바른 점수를 입력해주세요.")
+        }else{
+            function calcSum(num){
+                let sum = 0;
+            
+                for(let i=1; i<=num; i++){
+                    sum += i;
+                }
+            
+            return sum;
+        }
+        
+
+        let result = calcSum(n);
+        document.write(`1부터 ${n}까지 더하면 ${result}`);
+    }
+    </script>
+</body>
+</html>

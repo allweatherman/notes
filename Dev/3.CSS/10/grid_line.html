@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3,100px);
+            gap: 1rem;  /* 16px */
+        }
+        .box {
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+
+        }
+
+        .box1 {
+            background-color: #3689ff;
+            /*열 방향: 1번 라인부터 마지막(-1) 라인까지 
+              즉, 1열 ~ 3열 전체 차지 (1 / 4)
+            */
+            grid-column: 1 / -1;
+            /*
+                행 시작 : 1행에 위치
+                grid-row : 1 /2 ;
+            */
+            grid-row-start: 1;
+
+        }
+        .box2{
+            background-color: #5eff36;
+            grid-row: 2 / 4;
+            grid-column-start: 1;
+        }
+
+        .box3{
+            background-color: #e836ff;
+            grid-column: 2 / 4;
+            grid-row-start: 2;
+        }   
+        
+        .box4{
+            background-color: #36c6ff;
+            grid-row: 3 / 4;
+            grid-column-start: 2;
+        }
+        
+        .box5{
+            background-color: #ff6f36;
+            grid-row: 3 / 4;
+            grid-column-start: 3;
+        }        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">box1</div>    <!--1행 전체 차지-->
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+    </div>    
+</body>
+</html>

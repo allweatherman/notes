@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .accent {
+            font-weight: bold;
+            color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        (function(){
+
+            let name = prompt("이름을 입력하세요.");
+            let age = prompt("나이를 입력하세요.");
+            let type;
+            if(age>20){
+                type="성인"
+                document.write(`<p>안녕하세요 <span class="accent">${name}</span>님!
+                <br>당신은 <span class="accent">${type}</span>입니다.</p>`);
+            }else if(0<age<20){
+                type="미성년자"
+                document.write(`<p>안녕하세요 <span class="accent">${name}</span>님!
+                <br>당신은 <span class="accent">${type}</span>입니다.</p>`);
+            }
+            console.log(typeof name)
+            
+            
+
+        }());
+        
+    </script>
+</body>
+</html>

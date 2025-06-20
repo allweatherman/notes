@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 박스모델</title>
+    <style>
+        * {
+            margin:0 ;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #fbff08, #45a049);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .lab-content {
+            padding: 30px;
+        }
+
+        .basic-box {
+            width: 200px;
+            height: 100px;
+            background-color: #ffeb3b;
+            border: 5px solid #ff9800;
+            padding: 20px;
+            margin:20px auto;
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>css 박스모델</h1>
+            <p>기본 박스모델 구성요소</p>
+        </div>
+
+        <div class="lab-content">
+            <div class="lab-content">
+                <p><strong>아래 박스를 F12로 검사해보세요!</strong></p>
+                <div class="basic-box">
+                    Content 영역<br>
+                    (200px X 100px)
+                </div>
+                <div class="highlight">
+                    <strong>확인해보세요</strong><br>
+                    - 실제 박스 크기 = 200px + 40px(padding) + 10px(border) = 250px<br>
+                    - 개발자도구에서 각 영역이 다른 색으로 표시됨
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 카드 Grid 레이아웃 </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .page-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;;
+            font-size: 2rem;
+        }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto; /* 중앙 정렬 */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* 제품 카드 스타일 */
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 2px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(454deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px){
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+                padding: 15px;
+            }
+            .page-title{
+                font-size: 1.5rem;
+            }
+        }
+        /* 반응형 디자인 - 모바일 */
+         @media (max-width: 480x){
+            .product-grid {
+                grid-template-columns: 1fr; /*한줄에 하나씩*/
+                gap: 10px;
+                padding: 10px;
+            }
+            body{
+                padding: 10px;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 class="page-title">쇼핑몰 - 제품</h1>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                📱스마트폰 OS
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">iOS 26</h3>
+                <p class="product-description">좋아하는 Apple 제품을 구입하는 가장 좋은 방법</p>
+                <div class="product-price">1,550,000원</div>
+                <button class="buy-button">장바구니 담기</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                📱ipodO26
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">iOS 26</h3>
+                <p class="product-description">좋아하는 Apple 제품을 구입하는 가장 좋은 방법</p>
+                <div class="product-price">1,550,000원</div>
+                <button class="buy-button">장바구니 담기</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                📱스마트폰 OS
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">iOS 26</h3>
+                <p class="product-description">좋아하는 Apple 제품을 구입하는 가장 좋은 방법</p>
+                <div class="product-price">1,550,000원</div>
+                <button class="buy-button">장바구니 담기</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                📱ipodO26
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">iOS 26</h3>
+                <p class="product-description">좋아하는 Apple 제품을 구입하는 가장 좋은 방법</p>
+                <div class="product-price">1,550,000원</div>
+                <button class="buy-button">장바구니 담기</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                📱스마트폰 OS
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">iOS 26</h3>
+                <p class="product-description">좋아하는 Apple 제품을 구입하는 가장 좋은 방법</p>
+                <div class="product-price">1,550,000원</div>
+                <button class="buy-button">장바구니 담기</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                📱ipodO26
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">iOS 26</h3>
+                <p class="product-description">좋아하는 Apple 제품을 구입하는 가장 좋은 방법</p>
+                <div class="product-price">1,550,000원</div>
+                <button class="buy-button">장바구니 담기</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

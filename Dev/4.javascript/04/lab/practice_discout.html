@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #0c3268;
+            color: rgb(243,243,243);
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: yellow;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+        .exercise {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid yellow;
+        }
+
+        .notice {
+            background-color: rgba(115, 153, 151, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border : 2px solid rgb(108, 143, 143)
+        }
+        .result {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: yellow;
+            color: #0c3268;
+            border:none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #ffeb3b;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💰요일별 할인율 계산기</h1>
+        <div class="exercise">
+        <h3>요일에 따른 할인율을 확인하세요</h3>
+        <p>요일을 입력하거나 Enter키를 눌러 오늘의 할인율을 확인할 수 있습니다.</p>
+            <div class="notice">
+                
+                <p>📅요일별 할인율 안내</p>
+                <ul>
+                    <li>월요일, 화요일: 10% 할인</li>
+                    <li>수요일, 목요일: 15% 할인</li>
+                    <li>금요일: 20% 할인(불금 특가!🎉)</li>
+                    <li>토요일, 일요일: 5% 할인</li>
+                </ul>   
+            </div>
+        <button onclick="discountCalculator()">할인율 확인</button>
+        <!--결과를 표시할 영역-->
+        <div id="gradeResult" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function discountCalculator(){
+            let day = prompt("요일를 입력하세요 (월, 화, 수, 목, 금, 토, 일) 또는 Enter로 오늘 요일;")
+            let discount_rate;  //등급 저장 변수 선언
+            let discount_type;
+            let emoji;
+            const dayList = ["일", "월", "화", "수", "목", "금", "토"]
+            //입력값 유효성 검사
+            //isNaN() : 숫자가 아닌지 확인하는 함수1
+            //innerHTML : 요소 내부의 HTML 내용을 변경하는 속성
+            if(!dayList.includes(day)){
+                document.getElementById("gradeResult").innerHTML = "올바른 값를 입력해주세요"
+                return;
+            }
+             
+            switch(day){
+                case "월": 
+                case "화":
+                    discount_rate = "10%";
+                    discount_type = "기본";
+                    emoji = "🧮";
+                    break;
+                case "수": 
+                case "목":
+                    discount_rate = "15%";
+                    discount_type = "좋은";
+                    emoji = "👍";
+                    break;
+                case "금": 
+                    discount_rate = "20%";
+                    discount_type = "최대"
+                    emoji = "🎉";
+                    break;
+                case "토": 
+                case "일":
+                    discount_rate = "5%";
+                    discount_type = "기본"
+                    emoji = "🧮";
+                    break;
+            }
+
+            // 결과를 HTML에 출력
+            // 템플릿 리터럴('')
+            // ${변수명} : 변수 값을 문자열에 삽입하는 문법
+            document.getElementById("gradeResult").innerHTML = 
+                `${day}요일 할인율 : <span style="color:yellow"; font-size:1.5em";>${discount_rate}</span>
+                <p>${emoji}${discount_type} 할인!</p>
+                <p>💡할인율 적용하여 쇼핑하세요!</p>
+                `;
+                
+                
+        }
+
+        window.onload = function(){
+            console.log("성적 등급 계산기가 준비되었습니다");
+        }
+
+    </script>
+</body>
+</html>

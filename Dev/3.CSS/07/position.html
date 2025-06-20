@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position 속성</title>
+    <style>
+        p {
+            width: 500px;
+            height: 200px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+        #static {
+            position: static;
+        }
+
+        #relative1 {
+            position: relative;
+        }
+        #relative2 {
+            position: relative;
+            left: 100px;
+            top: -50px;
+        }
+        #fixed {
+            width:100px;
+            height: 100px;
+            background-color: #222;
+            position: fixed;
+            right: 30px;
+            top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <p id="static">The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.</p>
+    <p id="relative1">The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.</p>
+    <p id="relative2">The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.</p>   
+    <p id="fixed"></p>
+</body>
+</html>

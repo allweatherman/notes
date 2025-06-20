@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding : 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            line-height: 1.6;
+            padding : 80px;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+
+        }
+        .header {
+            width : 100%;
+            background: hwb(228 3% 69%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            padding : 40px;
+        }
+        .title {
+            border-bottom: 3px solid #5885ff;
+        }
+        .first {
+            font-size: 1.1em;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>이개발(Lee Developer)</h1>
+            <p>자바 백엔드 개발 지원자</p>
+        </header>
+        <main>
+            <section>
+                <h2  class="title">자기소개</h2>
+                <div>
+                    <p class="first">안녕하세요! 열정적인 백엔드 개발 지원자입니다.</p>
+                    <p>AI 시대에 LLM 기반의 관심이 많습니다.</p>
+                    <p>지속적인 학습과 성장을 통해 좋은 개발자가 되고 싶습니다.</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="title">핵심 기술</h2>
+                <p class="first">현재 보유한 기술 스택입니다.</p>
+                <ul class="skills">
+                    <li>HTML5 & CSS</li>
+                    <li>JavaScript(ES6+)</li>
+                    <li>Java
+                        <ul>
+                            <li>Basic</li>
+                            <li>Advance</li>
+                        </ul>
+                    </li> 
+                    <li>Git & GitHub</li>   
+                </ul>
+            </section>
+            <section>
+                <h2 class="title">핵심 경험</h2>
+                <p class="first">지금까지의 학습 여정입니다.</p>
+                <ul class="experience">
+                    <li>
+                        <strong>기반 기술</strong>
+                        <ul>
+                            <li>HTML, CSS, JavaScript 기초 학습</li>
+                            <li>반응형 웹 레이아웃 실습</li>
+                        </ul>
+                    </li> 
+                    <li>
+                        <strong>Java 과정</strong>
+                        <ul>
+                            <li>자바 기본 학습</li>
+                            <li>JDBC 학습</li>
+                        </ul>
+                    </li>    
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
